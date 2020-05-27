@@ -8,6 +8,10 @@ from UM.Preferences import Preferences
 from UM.Settings.ContainerRegistry import ContainerRegistry
 from UM.Workspace.WorkspaceWriter import WorkspaceWriter
 
+from UM.i18n import i18nCatalog
+catalog = i18nCatalog("cura")
+
+
 import UM.Settings.SettingRelation
 
 class CuraSettingsWriter(WorkspaceWriter):
@@ -123,7 +127,19 @@ class CuraSettingsWriter(WorkspaceWriter):
                 stream.write("<tr class=disabled>")
             else:
                 stream.write("<tr>")
-            stream.write("<td class="+style+" style='width:50%;padding-left:"+str(depth*25)+"'>" + str(stack.getProperty(key,"label")) + "</td>")
+            
+            definition_key=key + " label" 
+            # untranslated_label=stack.getProperty(key,"label").capitalize()
+            untranslated_label=stack.getProperty(key,"label")
+            # translated_label=catalog.i18nc(definition_key, untranslated_label)  
+            translated_label=catalog.i18nc("@label", untranslated_label)
+            
+            # translated_label=catalog.i18nc("@label", key)
+            # translated_label=catalog.i18n(untranslated_label)
+            
+            # catalog.i18nc("@tooltip", "Outer Wall") -> OK
+            # catalog.i18nc("@label", "Outer Wall") -> KO
+            stream.write("<td class="+style+" style='width:50%;padding-left:"+str(depth*25)+"'>" + str(translated_label) + "</td>")
             GetType=stack.getProperty(key,"type")
             GetVal=stack.getProperty(key,"value")
             if str(GetType)=='float':
