@@ -5,4 +5,4 @@ This creates an extra menu option under File -> "Save Project..." that allows yo
 
 ![Menu](./help/menu.jpg)
 
-See the [example_output.html](./help/example_output.html) file for a view of what you get on output.
+See the [example_output.html](http://./help/example_output.html) file for a view of what you get on output.
