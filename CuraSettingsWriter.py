@@ -1,5 +1,6 @@
-# Copyright (c) 2020
-# The CuraSettingWritter plugin is released under the terms of the AGPLv3 or higher.
+# Copyright (c) 2020 5axes
+# Initiale Source from Johnny Matthews 
+# The SnapShot plugin is released under the terms of the AGPLv3 or higher.
 
 from UM.Application import Application
 from cura.CuraVersion import CuraVersion  # type: ignore
@@ -40,7 +41,6 @@ class CuraSettingsWriter(WorkspaceWriter):
                         </script>
                         <h1>Cura Settings Export</h1>
                         <button id='enabled'>Toggle Disabled</button><P>""")
-
 
         stream.write("<table width=50% border=1 cellpadding=3>")
         

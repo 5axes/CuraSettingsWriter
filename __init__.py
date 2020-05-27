@@ -1,3 +1,6 @@
+# Copyright (c) 2020 5axes
+# The SnapShot plugin is released under the terms of the AGPLv3 or higher.
+
 from . import CuraSettingsWriter
 
 from UM.i18n import i18nCatalog
