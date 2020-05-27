@@ -34,7 +34,8 @@ When we ask for the value of "foo", we expect to get 25 as a result. The followi
 
 Profiles
 ---
-The profiles have some interdependency with one other, as can be seen in the picture below. 
+The profiles have some interdependency with one other, as can be seen in the picture below.
+![Profile Structure](Profile_Structure.png)
 
 **User**
 The user settings are all changes that are not stored to any profile. In the interface, a circular reset icon is shown for each of these settings. They are completely independant of the quality, quality_changes or intent. They are only "tied" to a machine.
